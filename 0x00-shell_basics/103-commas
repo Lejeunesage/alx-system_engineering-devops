@@ -1,0 +1,3 @@
+#!/bin/bash
+ls -p -A | LC_COLLATE=C sort -d | awk 'BEGIN {ORS=","} {printf "%s,", $0} END {print ""}'
+
