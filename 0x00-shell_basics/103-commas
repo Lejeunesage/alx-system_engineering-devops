@@ -1,3 +1,4 @@
 #!/bin/bash
-ls -p -A | LC_COLLATE=C sort -d | awk 'BEGIN {ORS=","} {printf "%s,", $0} END {print ""}'
+ls -a -1 -d -v -- */ | tr '\n' ',' && ls -a -1 -d -v -- [!.]*
+
 
